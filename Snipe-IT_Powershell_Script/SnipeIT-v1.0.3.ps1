@@ -1,9 +1,10 @@
-# Straits SnipeIT Asset Reporting Script
+# SnipeIT Asset Reporting Script
 # Version 1.0.3
 # Changes - 27/8/2021
 # Report Last Seen and Current Logged in User
 # Changes for OS Information Column
 # Correction to RAM information (showing installed ram size)
+# For Windows
 # - Parsad
 
 function SnipeData()
@@ -27,7 +28,7 @@ function SnipeData()
 		Import-Module SnipeitPS
 		#set base url and the apikey for snipe-it module in powershell
 		#API Key User autosync
-		Set-SnipeitInfo -URL 'http://itasset.mydomain.local' -apiKey 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTg0YzUwNGI1ZDMyNTRjMWUxMjkwZTY4ZjRkZWZkYzBkZGQ2Y2ZmMWJkNWIwYWQ0Mjk2YWYwMzc5M2NiMTQzZDYyNWZjMTBmMjg5ZDBmZGQiLCJpYXQiOjE2Mjk2OTAyNzEsIm5iZiI6MTYyOTY5MDI3MSwiZXhwIjoyMjYwODQyMjcwLCJzdWIiOiIzMzkiLCJzY29wZXMiOltdfQ.Xl8mbIP3iY5JOInCS8rVvT9YdSvgzFtYP7dsrM9Yy7n0yuRNqW2B8ya_E0LxMnEbliPskzYptx1J_8w_jYlh6rwmwZsVB8I0maiyUvXIm4Y3LFJTF1hwoqJ_KiWgE3nWurO90WrZagsbeHYS2Hx6EQUuy2JJTzlM_mvvB_OACDoJ8YO9LCY7ix-GXNdiPimE4NFqgveS_IjIxwzQwNOx0Jcb1KqRw08jXqjhGcVxjytpYRBoEt0LjcpK-Mp5CMOwvFtErNNfkI09TxiE1IaQI2m8LI70WXNpwmBmbbTOyvEtr-kAA6ekQHPQQH6_afABWlTSPsfm1-8WJof3OyvnaVylJpxtUCCpQhzO42VxEA456il9hw1AjFaUkK-8plyq_QwWMAnTr16L5fghv4zV7qqFKaL4_osB84f7O298bbCmQnIO0e8qrkUNpItUXSonl4Pq-aOfFhrhtRqAerwvLbjTqH-q8tNCTrZcSakw16cDI-WN4MN1sP6PSo7T75_upRxAF4ljP9iNxhgRwXXw8vNbyf94IzX7SVqPKe1bfz8kjTLXALI2y1rMpry4ARoB24QkVFnI4Mp_T3cvVi-u4X6G0Trp9ZGJ5flddcdU0fJRJQVa0zxoRQzmij8kQH58mdaUfsO6lhWuTIIRkeaH30zxbmeTgwCk3aYJlYK1MkY'
+		Set-SnipeitInfo -URL 'http://itasset.mydomain.local' -apiKey 'Place your API KEY here'
 		#Get PC Specs and Details
 		$CPUInfo = (gwmi win32_ComputerSystem).name #Get CPU Information
 		$OSInfo = Get-WmiObject Win32_OperatingSystem #Get OS Information
